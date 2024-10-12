@@ -14,7 +14,6 @@ class CountScreen extends StatefulWidget {
 class _CountScreenState extends State<CountScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     final countprovider = Provider.of<CountProvider>(context, listen: false);
 
@@ -37,7 +36,6 @@ class _CountScreenState extends State<CountScreen> {
         children: [
           Center(
               child: Consumer<CountProvider>(builder: (context, value, child) {
-            print("Only this widget build");
             return Text(
               value.count.toString(),
               style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
